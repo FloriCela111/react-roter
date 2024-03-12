@@ -1,11 +1,4 @@
-import React from 'react'
 
-const weatherService = () => {
-  return (
-    <div>
-      
-    </div>
-  )
+export const weatherService= {
+
 }
-
-export default weatherService; 

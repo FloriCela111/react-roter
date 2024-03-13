@@ -4,8 +4,16 @@ import {useEffect, useState} from "react";
 const About = () => {
     const [nr1, setNr1] = useState([1,2,3,4,5,6]); // [vlera e numrave tek, vlera e numrave cift], [9,12],
     const [result, setResult] = useState([0, 0]);
-    const [nr2, setNr2] = useState([[1,2,3],[4,5,6]]); // [vlera e 1, 2, 3], [5,7,9]
+    const [nr2, setNr2] = useState([[1, 2, 3], [4, 5, 6]]);
+    const [results, setResults] = useState([]);
 
+    useEffect(() => {
+        const sum = nr2[0].map((_, index) =>
+            nr2.reduce((acc, curr) => acc + curr[index], 0)
+        );
+        console.log(sum)
+        setResults(sum);
+    }, [nr2]);
     useEffect(() => {
         const numbers = nr1.reduce((acc, curr) => {
             if (curr % 2 === 0) {

@@ -8,7 +8,7 @@ const About = () => {
     const [results, setResults] = useState([]);
 
     useEffect(() => {
-        const sum = nr2[0].map((_, index) =>
+        const sum = nr2[0].map((lol, index) =>
             nr2.reduce((acc, curr) => acc + curr[index], 0)
         );
         console.log(sum)
@@ -26,6 +26,7 @@ const About = () => {
             [0, 0]
             );
         setResult(numbers);
+        console.log(numbers)
     }, [nr1]);
 
     //gjetja e nr tek
